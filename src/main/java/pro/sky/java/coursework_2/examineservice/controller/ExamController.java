@@ -17,8 +17,11 @@ public class ExamController {
         this.service = service;
     }
 
+    @CrossOrigin
     @GetMapping("{amount}")
+
     public Collection<Question> getQuestions(@PathVariable int amount) {
+        System.out.println(amount);
         return service.getQuestions(amount);
     }
 }
